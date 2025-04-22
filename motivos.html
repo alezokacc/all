@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Motivos que te amo</title>
+  <link rel="icon" href="flaticon.png" type="image/png" />
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #fff0f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+    }
+
+    .container {
+      padding: 30px;
+    }
+
+    .motivo {
+      background: #ffe0f0;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+
+    .dark .motivo {
+      background: #333;
+    }
+
+    nav {
+      background: #ffb6c1;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .dark nav {
+      background: #222;
+    }
+
+    .dark nav a {
+      color: #f0f0f0;
+    }
+
+    .toggle-theme {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      background: #ff69b4;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+
+    .dark .toggle-theme {
+      background: #8b008b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENU -->
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="historia.html">Nossa História</a>
+    <a href="motivos.html">Motivos que te amo</a>
+    <a href="promessas.html">Promessas</a>
+    <a href="galeria.html">Galeria</a>
+  </nav>
+
+  <!-- CONTEÚDO -->
+  <div class="container">
+    <h1>10 Motivos que te Amo 💖</h1>
+
+    <div class="motivo">
+      <h2>🥰 Seu Jeito Único</h2>
+      <p>Você tem um jeitinho só seu de falar, de sorrir, de existir. E isso me encanta todos os dias.</p>
+    </div>
+
+    <div class="motivo">
+      <h2>🎈 Sua Leveza</h2>
+      <p>Mesmo nos dias difíceis, você consegue me fazer sorrir. Você ilumina tudo ao redor com sua presença.</p>
+    </div>
+
+    <div class="motivo">
+      <h2>🧸 Sua Doçura</h2>
+      <p>O carinho com que você cuida de mim, os detalhes que você nota... tudo isso me faz te amar mais.</p>
+    </div>
+
+    <div class="motivo">
+      <h2>🤍 Seu Coração</h2>
+      <p>Você é gentil com todos ao seu redor, e isso mostra o quão puro é o seu coração.</p>
+    </div>
+
+    <div class="motivo">
+      <h2>🎶 Nossas Conversas</h2>
+      <p>Conversar com você é como ouvir minha música favorita: me acalma, me anima e me faz bem.</p>
+    </div>
+
+    <div class="motivo">
+      <h2>🌟 Seus Olhos</h2>
+      <p>O brilho que eles têm quando você sorri é indescritível. Eles falam com a alma.</p>
+    </div>
+
+    <div class="motivo">
+      <h2>🌈 Sua Forma de Ver o Mundo</h2>
+      <p>Você enxerga beleza nas pequenas coisas, e isso me faz querer ver o mundo com os seus olhos.</p>
+    </div>
+
+    <div class="motivo">
+      <h2>🍓 Os Nossos Momentos</h2>
+      <p>Seja assistindo um filme ou apenas andando de mãos dadas, tudo com você vira memória boa.</p>
+    </div>
+
+    <div class="motivo">
+      <h2>🐻 Seu Abraço</h2>
+      <p>Seu abraço é meu lugar favorito. Nele, eu me sinto seguro, em paz e amado.</p>
+    </div>
+
+    <div class="motivo">
+      <h2>💘 Porque você é você</h2>
+      <p>Não existe um único motivo. Eu te amo simplesmente por você ser exatamente como é.</p>
+    </div>
+  </div>
+
+  <button class="toggle-theme" onclick="toggleTheme()">🌙 Alternar Tema</button>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+
+</body>
+</html>
