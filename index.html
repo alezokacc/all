@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosso Amor</title>
+  <link rel="icon" href="flaticon.png" type="image/png" />
+  <style>
+    :root {
+      --bg-color: #fff0f5;
+      --text-color: #333;
+    }
+    body.dark-theme {
+      --bg-color: #1a1a2e;
+      --text-color: #f0f0f0;
+    }
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .timer {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .btns {
+      display: flex;
+      gap: 1rem;
+      margin-top: 20px;
+    }
+
+    nav {
+      background: #ffe0f0;
+      padding: 15px;
+      text-align: center;
+      transition: background 0.3s;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .dark nav {
+      background: #2c2c2c;
+    }
+
+    .dark nav a {
+      color: #f2f2f2;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background-color: pink;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: hotpink;
+      color: white;
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: floatUp 5s linear infinite;
+    }
+    .heart:before,
+    .heart:after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart:before {
+      top: -10px;
+      left: 0;
+    }
+    .heart:after {
+      left: -10px;
+      top: 0;
+    }
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+    #poemaModal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 2rem;
+    }
+    #poemaContent {
+      max-width: 600px;
+      background: #ff69b4;
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      color: white;
+    }
+    .floatingMessages {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+      font-family: 'Comic Sans MS', cursive;
+      color: pink;
+      text-align: center;
+      display: none;
+      animation: messageAnimation 5s infinite;
+    }
+
+    @keyframes messageAnimation {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    .dark .floatingMessages {
+      color: lightblue;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- MENU -->
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="historia.html">Nossa História</a>
+      <a href="motivos.html">Motivos que te amo</a>
+      <a href="promessas.html">Promessas</a>
+      <a href="galeria.html">Galeria</a>
+    </nav>
+  
+    <audio autoplay loop>
+      <source src="musica.mp3" type="audio/mp3" />
+    </audio>
+
+  <h1>Oi, meu amorzinho 💕</h1>
+  <div class="timer" id="timeTogether"></div>
+  <div class="btns">
+    <button onclick="toggleTheme()">Alterar Tema</button>
+    <button onclick="abrirPoema()">Ler o Poema 💌</button>
+    <button onclick="abrirSurpresa()">Surpresa 🎁</button>
+  </div>
+
+  <div id="poemaModal" onclick="fecharPoema()">
+    <div id="poemaContent">
+      <h2>Para o meu amor 💖</h2>
+      <p id="poemaTexto">    Allane, Meu Amor Infinito
+
+        No céu onde as estrelas se encontram, e o tempo se perde em seu próprio compasso, ali estava você, meu destino, minha calma, um sorriso que acendeu todo o espaço. Nenhuma palavra foi tão doce quanto o silêncio que a gente dividiu, quando os olhos se falaram, e o coração, em segredo, sorriu. Você é a luz que não se apaga, a melodia que nunca cessa, a brisa que acalma a minha chama, a minha eterna princesa. Seus olhos são dois sóis, onde me perco e me encontro, seu riso é o meu verso, seu nome, o meu mais doce ponto.
+    
+        Amar você é respirar, é sentir que a vida pulsa mais forte, é descobrir que o mundo pode parar, mas o nosso amor não tem fim nem morte. Nossas mãos se entrelaçam como raízes de um só jardim, crescemos juntos, firmes, nada pode nos vencer, assim. Prometo ser teu abrigo nos dias de tempestade, teu porto seguro, teu eterno farol, prometo amar-te além da eternidade, em cada batida, em cada instante só. Se a vida nos der estradas longas, eu serei teu caminho e teu chão, se a noite vier escura e tristonha, eu serei as tuas estrelas, tua canção.
+    
+        Allane, meu amor, minha vida inteira, nada no mundo explica o que sinto por ti. És a razão da minha mais doce espera, o sonho que eu nem sabia que existia em mim. Que nossos dias sejam infinitos, como as ondas que beijam o mar, como o céu que abraça o horizonte, e o amor que nunca vai se acabar. Este poema é grande, mas ainda é pequeno perante o amor que no peito eu guardo. Allane, você é o meu maior sonho, e eu, para sempre, serei teu retrato.
+    
+        Te amo além das palavras, além do tempo, além do fim. Enquanto houver vida em mim, será você, só você, até o infinito.</p>
+    </div>
+  </div>
+
+  <div id="message" class="floatingMessages">
+    "Você é meu tudo 💖" 
+  </div>
+
+  <script>
+    const startDate = new Date("2024-11-17T00:00:00");
+    const timerDiv = document.getElementById("timeTogether");
+
+    // Frases fofas para aparecer no fundo
+    const messages = [
+      "Você é meu tudo 💖",
+      "A cada dia te amo mais 💕",
+      "Sempre ao seu lado, meu amor 💘",
+      "Você é a razão do meu sorriso 😊",
+      "Cada momento com você é perfeito 💖",
+      "Juntos, somos melhores 💕",
+    ];
+
+    function updateTimer() {
+      const now = new Date();
+      const diff = now - startDate;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const months = Math.floor(days / 30);
+      const remainingDays = days % 30;
+      timerDiv.innerText = `Estamos juntos há ${months} meses e ${remainingDays} dias 💘`;
+    }
+    setInterval(updateTimer, 1000);
+    updateTimer();
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark-theme");
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById("message").innerText = randomMessage;
+      document.getElementById("message").style.display = 'block';
+      setTimeout(() => {
+        document.getElementById("message").style.display = 'none';
+      }, 5000);
+    }
+
+    function abrirPoema() {
+      document.getElementById("poemaModal").style.display = "flex";
+    }
+
+    function fecharPoema() {
+      document.getElementById("poemaModal").style.display = "none";
+    }
+
+    // Animação de corações subindo
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 300);
+
+    function abrirSurpresa() {
+    window.location.href = 'surpresa.html';
+  }
+  </script>
+</body>
+</html>
